@@ -30,6 +30,7 @@ export class OpenBadgeCredential extends BaseCredential {
 
     const achievement = data?.achievement ?? {};
     const result = data?.result ?? null; 
+    const evidence = data?.evidence ?? null;
     debug('achievement', achievement);
 
     const validFrom: string = data?.validFrom;
@@ -74,6 +75,7 @@ export class OpenBadgeCredential extends BaseCredential {
         achievement,
         ...(result !== null && {result})
       },
+      ...(evidence !== null && {evidence})
     }
     debug(`credential ${JSON.stringify(credential)}`);
 
