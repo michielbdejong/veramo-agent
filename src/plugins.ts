@@ -16,7 +16,7 @@ import { DIDMethods } from './types/index.js';
 import { getDbConnection } from './database/databaseService.js'
 import { createDidProviders } from "./utils/did.js";
 import { resolver } from './resolver.js';
-import { getContextConfigurationStore } from 'contexts/Store.js'
+import { getContextConfigurationStore } from './contexts/Store.js'
 
 export async function setupPlugins(): Promise<IAgentPlugin[]>
 {

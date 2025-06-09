@@ -1,8 +1,8 @@
 import Debug from 'debug';
 const debug = Debug('issuer:api');
 import { CredentialPayload, W3CVerifiableCredential } from "@veramo/core";
-import { getAgent } from "agent.js";
-import { credentialResolver } from "credentials/credentialResolver.js";
+import { getAgent } from "../../agent.js";
+import { credentialResolver } from "../../credentials/credentialResolver.js";
 import { Issuer } from "issuer/Issuer.js";
 import { CredentialOfferStatus } from "../../types/api.js";
 import { CredentialProofData } from "../../types/internal.js";

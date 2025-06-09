@@ -5,7 +5,7 @@ import { ErrorCodes } from "../../types/api.js";
 import { CreateCredentialOfferRequest } from "../../types/api/credentialOffer.js";
 import { ApiState } from "../../types/internal.js";
 import { PRE_AUTHORIZED_CODE_GRANT } from "../../types/specification/credential_offer.js";
-import { credentialDataChecker } from "credentials/credentialDataChecker.js";
+import { credentialDataChecker } from "../../credentials/credentialDataChecker.js";
 
 export function validateCreateCredentialOffer(issuer:Issuer, request:CreateCredentialOfferRequest):ApiState
 {

@@ -5,10 +5,10 @@ import { initialiseServer } from './server/index.js';
 import { setupPlugins, TAgentTypes } from './plugins.js';
 import { getOrCreateDIDs } from "./utils/did.js";
 import { initialiseIssuerStore } from './issuer/Store.js';
-import { initialiseCredentialConfigurationStore } from 'credentials/Store.js';
+import { initialiseCredentialConfigurationStore } from './credentials/Store.js';
 import { openObserverLog } from './utils/openObserverLog.js';
-import { initialiseContextConfigurationStore } from 'contexts/Store.js';
-import { initialiseVctConfigurationStore } from 'vct/Store.js';
+import { initialiseContextConfigurationStore } from './contexts/Store.js';
+import { initialiseVctConfigurationStore } from './vct/Store.js';
 
 export var _agent:TAgent<TAgentTypes>|null = null;
 export function getAgent():TAgent<TAgentTypes> { 

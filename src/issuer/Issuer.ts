@@ -15,12 +15,12 @@ import { CredentialPayload, DIDDocument, DIDResolutionOptions, IIdentifier, IKey
 import { toJwk, JwkKeyUse } from '@sphereon/ssi-sdk-ext.key-utils';
 import { getFirstKeyWithRelation } from '@sphereon/ssi-sdk-ext.did-utils'
 import { getAgent } from '../agent.js';
-import { getCredentialConfigurationStore } from "credentials/Store.js";
+import { getCredentialConfigurationStore } from "../credentials/Store.js";
 import { getDbConnection } from "#root/database/databaseService";
 import { Credential } from "#root/packages/datastore/index";
-import { getContextConfigurationStore } from 'contexts/Store.js';
-import { algMapping, keyMapping } from 'crypto/index.js';
-import { getVctForCredentialType } from 'vct/Store.js';
+import { getContextConfigurationStore } from '../contexts/Store.js';
+import { algMapping, keyMapping } from '../crypto/index.js';
+import { getVctForCredentialType } from '../vct/Store.js';
 import { getIdentifier, getIdentifierByAlias } from '../utils/did.js';
 import { SessionState, SessionStateManager } from '../utils/SessionStateManager.js';
 import { StringKeyedObject } from '#root/types/index';
