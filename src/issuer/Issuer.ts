@@ -14,7 +14,7 @@ import { ClaimsList, CredentialConfiguration, CredentialConfigurationJwtVC, Cred
 import { CredentialPayload, DIDDocument, DIDResolutionOptions, IIdentifier, IKey } from '@veramo/core';
 import { toJwk, JwkKeyUse } from '@sphereon/ssi-sdk-ext.key-utils';
 import { getFirstKeyWithRelation } from '@sphereon/ssi-sdk-ext.did-utils'
-import { getAgent } from 'agent.js';
+import { getAgent } from '../agent.js';
 import { getCredentialConfigurationStore } from "credentials/Store.js";
 import { getDbConnection } from "#root/database/databaseService";
 import { Credential } from "#root/packages/datastore/index";
