@@ -1,12 +1,12 @@
 import Debug from 'debug';
-const debug = Debug('issuer:cli');
+const debug = Debug('./issuer:cli');
 debug('start of cli.ts');
-import { getArgs } from "utils/args.js";
+import { getArgs } from "./utils/args.js";
 debug('cli.ts: importing getDbConnection');
 import { getDbConnection } from "./database/databaseService.js";
 import { Credential } from "./packages/datastore/entities/Credential.js";
-import { determineFieldLengths, FieldSettings } from 'utils/cli/determineFieldLengths.js';
-import { printField, printHeader } from 'utils/cli/printField.js';
+import { determineFieldLengths, FieldSettings } from './utils/cli/determineFieldLengths.js';
+import { printField, printHeader } from './utils/cli/printField.js';
 
 function printHelp()
 {
@@ -63,7 +63,7 @@ async function listCredentials(options:any[])
     for (var opt of options) {
         const kv = opt.split('=');
         switch (kv[0]) {
-            case 'issuer':
+            case './issuer':
                 qb = qb.andWhere('c.issuer=:issuer', {issuer: kv[1]});
                 break;
             case 'credpid':

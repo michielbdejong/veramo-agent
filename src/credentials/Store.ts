@@ -5,8 +5,8 @@ const debug = Debug('issuer:credentials');
  */
 
 import { CREDENTIAL_CONFIGURATION_PATH } from "../environment.js";
-import { loadJsonFiles } from "utils/generic.js";
-import { CredentialConfiguration } from "types/specification/metadata.js";
+import { loadJsonFiles } from "../utils/generic.js";
+import { CredentialConfiguration } from "../types/specification/metadata.js";
 
 export interface CredentialConfigurationStore {
   [x: string]: CredentialConfiguration;

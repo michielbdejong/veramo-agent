@@ -2,7 +2,7 @@ import {config as dotenvConfig} from "dotenv-flow";
 dotenvConfig()
 
 import {resolve} from "path";
-import {loadJsonFiles} from "utils/generic.js";
+import {loadJsonFiles} from "./utils/generic.js";
 import {IDIDOpts} from "./types/index.js";
 
 export const DB_CONNECTION_NAME = process.env.DB_CONNECTION_NAME ?? 'default'

@@ -22,7 +22,7 @@ export class Credentials1728382223150 implements MigrationInterface {
             { name: 'saveDate', type: dateTimeType },
             { name: 'updateDate', type: dateTimeType },
             { name: 'credpid', type: 'varchar', isNullable: true},
-            { name: 'issuer', type: 'varchar', isNullable: true},
+            { name: '../issuer', type: 'varchar', isNullable: true},
             { name: 'credentialId', type: 'varchar', isNullable: true},
             { name: 'uuid', type: 'varchar', isNullable: true}
           ],

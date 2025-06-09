@@ -1,9 +1,9 @@
 import Debug from 'debug';
 const debug = Debug('issuer:api');
-import { AccessTokenResponse } from 'types/specification/access_token.js';
-import { Issuer } from 'issuer/Issuer.js';
-import { CredentialOfferStatus } from 'types/api.js';
-import { SessionState } from 'utils/SessionStateManager.js';
+import { AccessTokenResponse } from "../../types/specification/access_token.js";
+import { Issuer } from '../Issuer.js';
+import { CredentialOfferStatus } from "../../types/api.js";
+import { SessionState } from '../../utils/SessionStateManager.js';
 import { JWT } from '#root/jwt/JWT';
 import { createUniqueId } from '#root/utils/createUniqueId';
 

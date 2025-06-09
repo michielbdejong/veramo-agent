@@ -1,5 +1,5 @@
 import Debug from 'debug';
-const debug = Debug('issuer:plugins');
+const debug = Debug('./issuer:plugins');
 
 import { IAgentPlugin, ICredentialIssuer, ICredentialVerifier, IDataStoreORM, IDIDManager, IKeyManager, IResolver } from '@veramo/core'
 import { DataStoreORM, DIDStore, KeyStore, PrivateKeyStore } from './packages/datastore/index.js'

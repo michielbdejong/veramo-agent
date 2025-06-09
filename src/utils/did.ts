@@ -7,7 +7,7 @@ import {JwkDIDProvider} from "../packages/did-jwk-provider/jwk-did-provider.js";
 import { getAgent } from "agent.js";
 import {DIDDocumentSection, IIdentifier, IDIDManagerCreateArgs} from "@veramo/core";
 import {didOptConfigs} from "environment.js";
-import { IDIDResult, KMS, DIDMethods, IDIDOpts } from 'types/index.js';
+import { IDIDResult, KMS, DIDMethods, IDIDOpts } from "../types/index.js";
 import {mapIdentifierKeysToDocWithJwkSupport} from "@sphereon/ssi-sdk-ext.did-utils";
 import { getDidJwkResolver } from "./didJwkResolver.js";
 import { getDidKeyResolver } from "./didKeyResolver.js";

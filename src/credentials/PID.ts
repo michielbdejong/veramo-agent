@@ -1,9 +1,9 @@
 import moment from 'moment';
-import { getCredentialTypeFromConfig } from "utils/getCredentialTypeFromConfig.js";
-import { toStringByJoin } from "utils/toStringByJoin.js";
+import { getCredentialTypeFromConfig } from "../utils/getCredentialTypeFromConfig.js";
+import { toStringByJoin } from "../utils/toStringByJoin.js";
 import { BaseCredential } from "./BaseCredential.js";
-import { CredentialProofData, CredentialResult } from "types/internal.js";
-import { CredentialDisplay } from "types/specification/metadata.js";
+import { CredentialProofData, CredentialResult } from "../types/internal.js";
+import { CredentialDisplay } from "../types/specification/metadata.js";
 import { CredentialPayload } from '@veramo/core';
 
 const pidIssuanceFormat = 'DD-MM-YYYY';

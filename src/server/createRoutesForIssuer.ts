@@ -17,7 +17,7 @@ import {
     listCredentials,
     revokeCredential,
 } from './endpoints/index.js'
-import { getBasePath } from 'utils/getBasePath.js';
+import { getBasePath } from '../utils/getBasePath.js';
 
 export async function createRoutesForIssuer(issuer:Issuer, expressSupport:ExpressSupport) {
     var tokenPath = '/token';

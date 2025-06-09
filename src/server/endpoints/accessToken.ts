@@ -1,13 +1,13 @@
 import Debug from 'debug';
-const debug = Debug('issuer:endpoints');
+const debug = Debug('../issuer:endpoints');
 import { Request, Response} from 'express'
 import { sendErrorResponse } from '@sphereon/ssi-express-support'
-import { createAccessTokenResponse } from 'issuer/api/createAccessTokenResponse.js';
-import { Issuer } from 'issuer/Issuer.js'
-import { openObserverLog } from 'utils/openObserverLog.js';
-import { TokenRequest, TokenResponse } from 'types/specification/access_token.js'
-import { validateAccessTokenRequest } from 'issuer/api/validateAccessTokenRequest.js'
-import { ErrorCodes } from 'types/api.js'
+import { createAccessTokenResponse } from '../../issuer/api/createAccessTokenResponse.js';
+import { Issuer } from '../../issuer/Issuer.js'
+import { openObserverLog } from '../../utils/openObserverLog.js';
+import { TokenRequest, TokenResponse } from '../../types/specification/access_token.js'
+import { validateAccessTokenRequest } from '../../issuer/api/validateAccessTokenRequest.js'
+import { ErrorCodes } from "../../types/api.js"
 
 export function accessToken(issuer: Issuer, tokenPath:string) {
     const externalAS = issuer.metadata.authorization_servers

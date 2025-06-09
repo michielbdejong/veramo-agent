@@ -1,10 +1,10 @@
-import { Issuer } from 'issuer/Issuer.js';
+import { Issuer } from '../issuer/Issuer.js';
 import { AcademicBaseCredential } from './AcademicBaseCredential.js';
 import { PID } from './PID.js';
 import { OpenBadgeCredential } from './OpenBadgeCredential.js';
 import { GenericCredential } from './GenericCredential.js';
 import { AcademicEnrollmentCredential } from './AcademicEnrollmentCredential.js';
-import { getCredentialTypeFromConfig } from 'utils/getCredentialTypeFromConfig.js';
+import { getCredentialTypeFromConfig } from '../utils/getCredentialTypeFromConfig.js';
 
 export function credentialDataChecker(issuer:Issuer, credentialId:string, claims: any): boolean {
     const credentialConfiguration = issuer.getCredentialConfiguration(credentialId);

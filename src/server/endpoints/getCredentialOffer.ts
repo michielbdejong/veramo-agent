@@ -2,10 +2,10 @@ import Debug from 'debug';
 const debug = Debug('issuer:endpoints');
 import { Request, Response } from 'express'
 import { sendErrorResponse } from '@sphereon/ssi-express-support'
-import { Issuer } from 'issuer/Issuer.js';
-import { openObserverLog } from 'utils/openObserverLog.js';
-import { validateGetCredentialOffer } from 'issuer/api/validateGetCredentialOffer.js';
-import { CredentialOfferStatus, ErrorCodes } from 'types/api.js';
+import { Issuer } from '../../issuer/Issuer.js';
+import { openObserverLog } from '../../utils/openObserverLog.js';
+import { validateGetCredentialOffer } from '../../issuer/api/validateGetCredentialOffer.js';
+import { CredentialOfferStatus, ErrorCodes } from "../../types/api.js";
 
 export function getCredentialOffer(issuer:Issuer, getPath:string) {
     issuer.router!.get(getPath, async (request: Request, response: Response) => {

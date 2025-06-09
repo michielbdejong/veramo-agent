@@ -4,9 +4,9 @@ import { CredentialPayload, W3CVerifiableCredential } from "@veramo/core";
 import { getAgent } from "agent.js";
 import { credentialResolver } from "credentials/credentialResolver.js";
 import { Issuer } from "issuer/Issuer.js";
-import { CredentialOfferStatus } from "types/api.js";
-import { CredentialProofData } from "types/internal.js";
-import { CredentialResponse } from "types/specification/credential_response.js";
+import { CredentialOfferStatus } from "../../types/api.js";
+import { CredentialProofData } from "../../types/internal.js";
+import { CredentialResponse } from "../../types/specification/credential_response.js";
 import { createUniqueId } from '#root/utils/createUniqueId';
 
 export async function issueCredential(issuer:Issuer, proofData:CredentialProofData): Promise<CredentialResponse>

@@ -41273,7 +41273,7 @@ Certificate.prototype.isExpired = function (when) {
 };
 
 Certificate.prototype.isSignedBy = function (issuerCert) {
-	utils.assertCompatible(issuerCert, Certificate, [1, 0], 'issuer');
+	utils.assertCompatible(issuerCert, Certificate, [1, 0], '../issuer');
 
 	if (!this.issuer.equals(issuerCert.subjects[0]))
 		return (false);
@@ -41286,7 +41286,7 @@ Certificate.prototype.isSignedBy = function (issuerCert) {
 };
 
 Certificate.prototype.isSignedByKey = function (issuerKey) {
-	utils.assertCompatible(issuerKey, Key, [1, 2], 'issuerKey');
+	utils.assertCompatible(issuerKey, Key, [1, 2], '../issuerKey');
 
 	if (this.issuerKey !== undefined) {
 		return (this.issuerKey.
@@ -41426,8 +41426,8 @@ Certificate.create =
 	utils.assertCompatible(key, Key, [1, 0], 'key');
 	if (PrivateKey.isPrivateKey(key))
 		key = key.toPublic();
-	utils.assertCompatible(issuer, Identity, [1, 0], 'issuer');
-	utils.assertCompatible(issuerKey, PrivateKey, [1, 2], 'issuer key');
+	utils.assertCompatible(issuer, Identity, [1, 0], '../issuer');
+	utils.assertCompatible(issuerKey, PrivateKey, [1, 2], '../issuer key');
 
 	assert.optionalObject(options, 'options');
 	if (options === undefined)
@@ -87949,7 +87949,7 @@ SIGN_ALGS['1.3.14.3.2.3'] = 'rsa-md5';
 SIGN_ALGS['1.3.14.3.2.29'] = 'rsa-sha1';
 
 var EXTS = {
-	'issuerKeyId': '2.5.29.35',
+	'../issuerKeyId': '2.5.29.35',
 	'altName': '2.5.29.17',
 	'basicConstraints': '2.5.29.19',
 	'keyUsage': '2.5.29.15',

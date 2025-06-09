@@ -1,4 +1,4 @@
-import { StringKeyedObject } from "types/index.js";
+import { StringKeyedObject } from "../../types/index.js";
 import { AuthorizationCodeGrant, TxCode } from "../specification/credential_offer.js";
 
 /* Creating the initial credential offer */

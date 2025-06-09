@@ -1,4 +1,4 @@
-import { SessionState } from 'utils/SessionStateManager.js';
+import { SessionState } from '../utils/SessionStateManager.js';
 import { ErrorCodes } from './api.js';
 import { StringKeyedObject } from './index.js';
 import { StatusListsOption } from './specification/statuslists.js';

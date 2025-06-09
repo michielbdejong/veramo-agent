@@ -3,11 +3,11 @@
  * data in the in-memory Veramo data store
  */
 
-import { METADATA_PATH, ISSUER_PATH } from "environment.js";
-import { loadJsonFiles } from "utils/generic.js";
+import { METADATA_PATH, ISSUER_PATH } from "../environment.js";
+import { loadJsonFiles } from "../utils/generic.js";
 import { Issuer } from "./Issuer.js";
-import { IssuerConfiguration } from "types/internal.js";
-import { MetadataConfiguration } from "types/api/metadata.js";
+import { IssuerConfiguration } from "../types/internal.js";
+import { MetadataConfiguration } from "../types/api/metadata.js";
 
 export interface IssuerStore {
     [x:string]:Issuer;

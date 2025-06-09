@@ -5,12 +5,12 @@ import moment from "moment";
 import { Router } from "express";
 import { JsonWebKey } from 'did-resolver';
 import { jwtDecode } from 'jwt-decode'
-import { StatusList } from "types/specification/statuslists.js";
-import { StatusListRevocationState } from 'types/api.js';
-import { IssuerConfiguration } from 'types/internal.js';
+import { StatusList } from "../types/specification/statuslists.js";
+import { StatusListRevocationState } from "../types/api.js";
+import { IssuerConfiguration } from "../types/internal.js";
 import { JWT } from '#root/jwt/JWT';
-import { ExtendableCredentialConfiguration, MetadataConfiguration } from 'types/api/metadata.js';
-import { ClaimsList, CredentialConfiguration, CredentialConfigurationJwtVC, CredentialConfigurations, CredentialConfigurationSdJwt, Metadata } from 'types/specification/metadata.js';
+import { ExtendableCredentialConfiguration, MetadataConfiguration } from "../types/api/metadata.js";
+import { ClaimsList, CredentialConfiguration, CredentialConfigurationJwtVC, CredentialConfigurations, CredentialConfigurationSdJwt, Metadata } from "../types/specification/metadata.js";
 import { CredentialPayload, DIDDocument, DIDResolutionOptions, IIdentifier, IKey } from '@veramo/core';
 import { toJwk, JwkKeyUse } from '@sphereon/ssi-sdk-ext.key-utils';
 import { getFirstKeyWithRelation } from '@sphereon/ssi-sdk-ext.did-utils'
@@ -19,11 +19,10 @@ import { getCredentialConfigurationStore } from "credentials/Store.js";
 import { getDbConnection } from "#root/database/databaseService";
 import { Credential } from "#root/packages/datastore/index";
 import { getContextConfigurationStore } from 'contexts/Store.js';
-import { credentialDataChecker } from "credentials/credentialDataChecker.js";
 import { algMapping, keyMapping } from 'crypto/index.js';
 import { getVctForCredentialType } from 'vct/Store.js';
-import { getIdentifier, getIdentifierByAlias } from 'utils/did.js';
-import { SessionState, SessionStateManager } from 'utils/SessionStateManager.js';
+import { getIdentifier, getIdentifierByAlias } from '../utils/did.js';
+import { SessionState, SessionStateManager } from '../utils/SessionStateManager.js';
 import { StringKeyedObject } from '#root/types/index';
 import { retrieveASServerKey } from './lib/retrieveASServerKey.js';
 import { createUniqueId } from '#root/utils/createUniqueId';
@@ -196,11 +195,6 @@ export class Issuer
         this.sessionData.clearAll();
         //await this.vcIssuer.cNonces.clearExpired();
         //await this.vcIssuer.uris?.clearExpired();
-    }
-
-    public checkCredentialData(credentialIds:string[], claims: any)
-    {
-        return credentialDataChecker(this, credentialIds[0], claims);
     }
 
     public getDidDoc ():DIDDocument {
