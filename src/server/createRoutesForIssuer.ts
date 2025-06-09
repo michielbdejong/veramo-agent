@@ -7,7 +7,7 @@ import { Issuer } from "issuer/Issuer.js";
 import {
     accessToken,
     createCredentialOfferResponse,
-    getCredential,
+    // getCredential,
     getCredentialOffer,
     getIssueStatus,
     getMetadata,
@@ -53,7 +53,7 @@ export async function createRoutesForIssuer(issuer:Issuer, expressSupport:Expres
     if (credentialEndpoint.startsWith(issuer.options.baseUrl)) {
         credentialEndpoint = credentialEndpoint.substring(issuer.options.baseUrl.length);
     }
-    getCredential(issuer, credentialEndpoint);
+    // getCredential(issuer, credentialEndpoint);
   
     // Enable the back channel interface to create a new credential offer
     createCredentialOfferResponse(issuer, '/api/create-offer', '/get-credential-offer');

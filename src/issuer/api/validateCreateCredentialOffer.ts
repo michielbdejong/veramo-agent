@@ -5,7 +5,7 @@ import { ErrorCodes } from "../../types/api.js";
 import { CreateCredentialOfferRequest } from "../../types/api/credentialOffer.js";
 import { ApiState } from "../../types/internal.js";
 import { PRE_AUTHORIZED_CODE_GRANT } from "../../types/specification/credential_offer.js";
-import { credentialDataChecker } from "../../credentials/credentialDataChecker.js";
+// import { credentialDataChecker } from "../../credentials/credentialDataChecker.js";
 
 export function validateCreateCredentialOffer(issuer:Issuer, request:CreateCredentialOfferRequest):ApiState
 {
@@ -48,12 +48,12 @@ export function validateCreateCredentialOffer(issuer:Issuer, request:CreateCrede
     // setups (for example: two AcademicBaseCredential's with different branding, or two
     // GenericCredential's with different VC format)        
     if (request.grants[PRE_AUTHORIZED_CODE_GRANT]) {
-        if (!credentialDataChecker(issuer, credentialConfigIds[0], request.credentialDataSupplierInput || {})) {
-            debug("invalid because the requested credential data is incorrect", request.credentialDataSupplierInput);
-            error.error = ErrorCodes.INVALID_REQUEST;
-            error.description = "Missing required claims";
-            return error;
-        }
+        // if (!credentialDataChecker(issuer, credentialConfigIds[0], request.credentialDataSupplierInput || {})) {
+        //     debug("invalid because the requested credential data is incorrect", request.credentialDataSupplierInput);
+        //     error.error = ErrorCodes.INVALID_REQUEST;
+        //     error.description = "Missing required claims";
+        //     return error;
+        // }
     }
   
     debug("create credential offer is valid");

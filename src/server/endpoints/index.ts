@@ -1,5 +1,5 @@
 export { accessToken }   from './accessToken.js'
-export { getCredential } from './getCredential.js'
+// export { getCredential } from './getCredential.js'
 export { getCredentialOffer } from './getCredentialOffer.js';
 export { createCredentialOfferResponse } from './createCredentialOfferResponse.js';
 export { getMetadata } from './getMetadata.js';
