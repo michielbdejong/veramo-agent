@@ -17,6 +17,7 @@ import {
     listCredentials,
     revokeCredential,
 } from './endpoints/index.js'
+import { getCredential } from './endpoints/getCredential.js';
 import { getBasePath } from '../utils/getBasePath.js';
 
 export async function createRoutesForIssuer(issuer:Issuer, expressSupport:ExpressSupport) {
@@ -53,7 +54,7 @@ export async function createRoutesForIssuer(issuer:Issuer, expressSupport:Expres
     if (credentialEndpoint.startsWith(issuer.options.baseUrl)) {
         credentialEndpoint = credentialEndpoint.substring(issuer.options.baseUrl.length);
     }
-    // getCredential(issuer, credentialEndpoint);
+    getCredential(issuer, credentialEndpoint);
   
     // Enable the back channel interface to create a new credential offer
     createCredentialOfferResponse(issuer, '/api/create-offer', '/get-credential-offer');
