@@ -1,6 +1,6 @@
 import { expect, test} from 'vitest';
-import { BaseCredential } from '../../../dist/credentials/BaseCredential.js';
-import { Issuer } from '../../../dist/issuer/Issuer.js';
+import { BaseCredential } from '../../credentials/BaseCredential.js';
+import { Issuer } from '../../issuer/Issuer.js';
 
 test('BaseCredential constructor', async () => {
     const credential = new BaseCredential(new Issuer({} as unknown as any, {} as unknown as any), '');
